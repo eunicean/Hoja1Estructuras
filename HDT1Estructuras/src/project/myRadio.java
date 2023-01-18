@@ -39,7 +39,7 @@ public class myRadio {
 			if(option.equals("4")) {
 				System.out.println("Escribe el numero de boton en el que se guardara la emisora (1-12)");
 				selectedButton = scan.nextInt();
-				System.out.println("Se cargo la guardo:" + MyRadio.saveFrequency(selectedButton));
+				System.out.println("Se guardo la emisora:" + MyRadio.saveFrequency(selectedButton));
 				
 			}
 	
