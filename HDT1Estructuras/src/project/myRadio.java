@@ -10,9 +10,7 @@ public class myRadio {
 		int selectedButton;
 		
 		while(true) {
-			System.out.println("Bienvenido, la Radio actualmente se encuentra: \n"
-								+"Con el tipo de Frecuencia                    : \n"
-								+"En la Emisora			             :\n");
+			System.out.println("Bienvenido al simulador de Radio ");
 			
 			System.out.println("Ingrese el numero de la opcion que desea realizar");
 		
