@@ -4,6 +4,7 @@ public class myRadio {
 
 	public static void main(String[] args) {
 		
+		Radio MyRadio;
 		Scanner scan = new Scanner(System.in);
 		String option;
 		
@@ -21,7 +22,29 @@ public class myRadio {
 				         	+ "5.Elegir la emisora de un boton\n"
 				         	+ "6.Apagar el radio");
 		
-			option = "aaz" + scan.nextLine();
+			option = "" + scan.nextLine();
+			
+			if(option.equals("1")) {
+				System.out.println("Se cambio el status a: " + changeStatusRadio() );
+			}
+			
+			if(option.equals("2")) {
+				
+				System.out.println("Se cambia a la frecuencia: " + MyRadio.chageFrequency( MyRadio.getAmFm() ) );
+			}
+
+			if(option.equals("3")) {
+				System.out.println("Se avanzo a la emisora: " + MyRadio.nextStation() );
+			}
+			
+			if(option.equals("4")) {
+				System.out.println("12d");
+			}
+	
+			if(option.equals("5")) {
+				System.out.println("12e");
+			}
+			
 		
 		}
 		
