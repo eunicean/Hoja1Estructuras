@@ -7,6 +7,7 @@ public class myRadio {
 		Radio MyRadio;
 		Scanner scan = new Scanner(System.in);
 		String option;
+		int selectedButton;
 		
 		while(true) {
 			System.out.println("Bienvenido, la Radio actualmente se encuentra: \n"
@@ -25,12 +26,12 @@ public class myRadio {
 			option = "" + scan.nextLine();
 			
 			if(option.equals("1")) {
-				System.out.println("Se cambio el status a: " + changeStatusRadio() );
+				System.out.println("Se cambio el status a: " + MyRadio.changeStatusRadio() );
 			}
 			
 			if(option.equals("2")) {
-				
-				System.out.println("Se cambia a la frecuencia: " + MyRadio.chageFrequency( MyRadio.getAmFm() ) );
+			
+				System.out.println("Se cambia a la frecuencia: " + MyRadio.changeFrequency( MyRadio.getAmFm() ) );
 			}
 
 			if(option.equals("3")) {
@@ -38,14 +39,21 @@ public class myRadio {
 			}
 			
 			if(option.equals("4")) {
-				System.out.println("12d");
+				System.out.println("Escribe el numero de boton en el que se guardara la emisora (1-12)");
+				selectedButton = scan.nextInt();
+				System.out.println("Se cargo la guardo:" + MyRadio.saveFrequency(selectedButton));
+				
 			}
 	
 			if(option.equals("5")) {
-				System.out.println("12e");
+				System.out.println("\"Escribe el numero de boton del cual deseas cargar la emisora (1-12)");
+				selectedButton = scan.nextInt();
+				System.out.println("Se cargo la emisora:" + MyRadio.saveFrequency(selectedButton));
 			}
-			
 		
+			if(option.equals("6")) {
+				System.out.println("Se cambio el status a: " + MyRadio.changeStatusRadio() );
+			}
 		}
 		
 
