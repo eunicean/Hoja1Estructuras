@@ -1,3 +1,10 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Hoja de trabajo 1-Radio. Algoritmos y Estructuras de datos 
+ * Irving Morales-22781, Ricardo Chuy-221007, Eunice Mata 
+ * The objective of this code is to simulate a car radio with its basic functions
+ */
+
 package project;
 import java.util.Scanner;
 public class myRadio {
