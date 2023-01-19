@@ -133,7 +133,7 @@ public class Radio implements radioFunctions{
 			else {
 				setAMfrequency(510.0);
 			}
-			r = String.format("%.2f", getAMfrequency()) + " AM";
+			r = String.format("%.0f", getAMfrequency()) + " AM";
 		}
 		else if(getAmFm() == "FM"){
 			if(getFMfrequency() < 107.9) {
@@ -168,7 +168,7 @@ public class Radio implements radioFunctions{
 			}
 			else {
 				setAMfrequency(AMbuttons.get(num-1));
-				r = r + String.format("%.2f", AMbuttons.get(num-1)) + " AM";
+				r = r + String.format("%.0f", AMbuttons.get(num-1)) + " AM";
 			}
 		}
 		else if(getAmFm() == "FM"){
@@ -205,7 +205,7 @@ public class Radio implements radioFunctions{
 	@Override
 	public String saveStationAm(int id) {
 		AMbuttons.set(id, getAMfrequency());
-		String r = String.format("%.2f", getAMfrequency()) + " AM";
+		String r = String.format("%.0f", getAMfrequency()) + " AM";
 		return r;
 	}
 
@@ -216,7 +216,7 @@ public class Radio implements radioFunctions{
 		if(getAmFm() == "AM"){
 			r = r + "Botones AM\n";
 			for(int i = 0;i<6;i++) {
-				r = r + " " + (i+1) + ". " + String.format("%.2f", AMbuttons.get(i)) + "\n";
+				r = r + " " + (i+1) + ". " + String.format("%.0f", AMbuttons.get(i)) + "\n";
 			}
 		}
 		else if(getAmFm() == "FM"){

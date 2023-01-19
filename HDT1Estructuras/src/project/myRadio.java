@@ -13,7 +13,7 @@ public class myRadio {
 		while(true) {
 			String radStatus = " Radio: ";
 			if(MyRadio.getAmFm()=="AM") {
-				radStatus = radStatus + String.format("%.2f", MyRadio.getAMfrequency()) + " AM";
+				radStatus = radStatus + String.format("%.0f", MyRadio.getAMfrequency()) + " AM";
 			}
 			else if(MyRadio.getAmFm()=="FM"){
 				radStatus = radStatus + String.format("%.2f", MyRadio.getFMfrequency()) + " FM";
