@@ -39,7 +39,9 @@ public class myRadio {
 			}
 			
 			if(MyRadio.isStatus() == false) {
-				System.out.println("Radio aun no está encendida");
+				System.out.println("+-----------------------------+");
+				System.out.println("| Radio aun no está encendida |");
+				System.out.println("+-----------------------------+");
 			}
 			else {
 				if(option.equals("2")) {
