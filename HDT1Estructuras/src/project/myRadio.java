@@ -38,32 +38,39 @@ public class myRadio {
 				System.out.println("Se cambio el status a: " + MyRadio.changeStatusRadio() + "\n");
 			}
 			
-			if(option.equals("2")) {
-			
-				System.out.println("Se cambia a la frecuencia: " + MyRadio.changeAmFm(  ) + "\n");
+			if(MyRadio.isStatus() == false) {
+				System.out.println("Radio aun no está encendida");
 			}
+			else {
+				if(option.equals("2")) {
+					
+					System.out.println("Se cambia a la frecuencia: " + MyRadio.changeAmFm(  ) + "\n");
+				}
 
-			if(option.equals("3")) {
-				System.out.println("Se avanzo a la emisora: " + MyRadio.nextStation() + "\n");
+				if(option.equals("3")) {
+					System.out.println("Se avanzo a la emisora: " + MyRadio.nextStation() + "\n");
+				}
+				
+				if(option.equals("4")) {
+					System.out.println(MyRadio.printListButtons());
+					System.out.println("Escribe el numero de boton en el que se guardara la emisora (1-6)");
+					selectedButton = scan.nextInt();
+					System.out.println("Se guardo la emisora:" + MyRadio.saveFrequency(selectedButton) + "\n");
+				}
+		
+				if(option.equals("5")) {
+					System.out.println(MyRadio.printListButtons());
+					System.out.println("\"Escribe el numero de boton del cual deseas cargar la emisora (1-6)");
+					selectedButton = scan.nextInt();
+					System.out.println(MyRadio.selectFrequency(selectedButton) + "\n");
+				}
+			
+				if(option.equals("6")) {
+					System.out.println("Se cambio el status a: " + MyRadio.changeStatusRadio() + "\n");
+				}
 			}
 			
-			if(option.equals("4")) {
-				System.out.println(MyRadio.printListButtons());
-				System.out.println("Escribe el numero de boton en el que se guardara la emisora (1-6)");
-				selectedButton = scan.nextInt();
-				System.out.println("Se guardo la emisora:" + MyRadio.saveFrequency(selectedButton) + "\n");
-			}
-	
-			if(option.equals("5")) {
-				System.out.println(MyRadio.printListButtons());
-				System.out.println("\"Escribe el numero de boton del cual deseas cargar la emisora (1-6)");
-				selectedButton = scan.nextInt();
-				System.out.println(MyRadio.selectFrequency(selectedButton) + "\n");
-			}
-		
-			if(option.equals("6")) {
-				System.out.println("Se cambio el status a: " + MyRadio.changeStatusRadio() + "\n");
-			}
+			
 		}
 		
 
