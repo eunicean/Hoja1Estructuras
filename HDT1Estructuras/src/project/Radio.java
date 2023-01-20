@@ -5,13 +5,11 @@
  * The objective of this code is to simulate a car radio with its basic functions
  */
 
-
-
 package project;
 import java.util.*;
 import java.text.DecimalFormat;
 
-public class Radio implements radioFunctions{
+public class Radio implements IRadio{
 	//attributes
 	private boolean status;
 	private String AmFm;
@@ -176,7 +174,7 @@ public class Radio implements radioFunctions{
 	/** Cambia la frecuencia de la radio
 	 * @return String. La frecuencia en la que se encuentra el radio (AM/FM)
 	 */
-	@Override
+	
 	public String changeAmFm() {
 		String r = "";
 		if(getAmFm() == "AM") {
@@ -253,7 +251,7 @@ public class Radio implements radioFunctions{
 	 * @param num. El numero de boton en la que esa guardad la estación que el usuario dese cargar
 	 * @return String. La nueva estacion en la que se encuentra la radio y su frecuencia
 	 */
-	@Override
+	
 	public String selectFrequency(int num) {
 		String r = "Se cargo la emisora: ";
 		if(getAmFm() == "AM"){
@@ -282,7 +280,7 @@ public class Radio implements radioFunctions{
 	 * @param num. 
 	 * @return String. Espacio en blanco
 	 */
-	@Override
+	
 	public String saveFrequency(int num) {
 		String r = "";
 		if(getAmFm() == "AM"){
