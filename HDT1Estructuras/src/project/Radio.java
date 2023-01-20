@@ -1,3 +1,12 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Hoja de trabajo 1-Radio. Algoritmos y Estructuras de datos 
+ * Irving Morales-22781, Ricardo Chuy-221007, Eunice Mata 
+ * The objective of this code is to simulate a car radio with its basic functions
+ */
+
+
+
 package project;
 import java.util.*;
 import java.text.DecimalFormat;
@@ -31,63 +40,123 @@ public class Radio implements radioFunctions{
 		}
 	}
 
+	
+	/** 
+	 * @return boolean
+	 */
 	//setters and getters
 	public boolean isStatus() {
 		return status;
 	}
 
+	
+	/** 
+	 * @param status
+	 */
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	public String getAmFm() {
 		return AmFm;
 	}
 
+	
+	/** 
+	 * @param amFm
+	 */
 	public void setAmFm(String amFm) {
 		AmFm = amFm;
 	}
 
+	
+	/** 
+	 * @return double
+	 */
 	public double getAMfrequency() {
 		return AMfrequency;
 	}
 
+	
+	/** 
+	 * @param aMfrequency
+	 */
 	public void setAMfrequency(double aMfrequency) {
 		AMfrequency = aMfrequency;
 	}
 
+	
+	/** 
+	 * @return double
+	 */
 	public double getFMfrequency() {
 		return FMfrequency;
 	}
 
+	
+	/** 
+	 * @param fMfrequency
+	 */
 	public void setFMfrequency(double fMfrequency) {
 		FMfrequency = fMfrequency;
 	}
 
+	
+	/** 
+	 * @return ArrayList<Double>
+	 */
 	public ArrayList<Double> getAMbuttons() {
 		return AMbuttons;
 	}
 
+	
+	/** 
+	 * @param aMbuttons
+	 */
 	public void setAMbuttons(ArrayList<Double> aMbuttons) {
 		AMbuttons = aMbuttons;
 	}
 
+	
+	/** 
+	 * @return ArrayList<Double>
+	 */
 	public ArrayList<Double> getFMbuttons() {
 		return FMbuttons;
 	}
 
+	
+	/** 
+	 * @param fMbuttons
+	 */
 	public void setFMbuttons(ArrayList<Double> fMbuttons) {
 		FMbuttons = fMbuttons;
 	}
 
+	
+	/** 
+	 * @return int
+	 */
 	public int getVolumen() {
 		return volumen;
 	}
 
+	
+	/** 
+	 * @param volumen
+	 */
 	public void setVolumen(int volumen) {
 		this.volumen = volumen;
 	}
 
+	
+	/** Cambia el estado de a radio
+	 * @return String. El estado de la radio (encendido/apagado)
+	 */
 	//methods from the interface 
 	@Override
 	public String changeStatusRadio() {
@@ -103,6 +172,10 @@ public class Radio implements radioFunctions{
 		return r;
 	}
 
+	
+	/** Cambia la frecuencia de la radio
+	 * @return String. La frecuencia en la que se encuentra el radio (AM/FM)
+	 */
 	@Override
 	public String changeAmFm() {
 		String r = "";
@@ -117,12 +190,20 @@ public class Radio implements radioFunctions{
 		return r;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	@Override
 	public String prevStation() {
 		// method no needed
 		return null;
 	}
 
+	
+	/** Avanza a la siguiente estación de la radio 
+	 * @return String. La nueva estacion en la que se encuentra la radio y su frecuencia
+	 */
 	@Override
 	public String nextStation() {
 		String r = "";
@@ -147,18 +228,31 @@ public class Radio implements radioFunctions{
 		return r;
 	}
 
+	
+	/** Sube el volumen de la radio 
+	 * @return String. No retorna nada
+	 */
 	@Override
 	public String upVolume() {
 		// Method not needed
 		return null;
 	}
 
+	
+	/** Baja el volumen de la radio
+	 * @return String
+	 */
 	@Override
 	public String downVolume() {
 		// Method not needed
 		return null;
 	}
 	
+	
+	/** Regresa a la estacion guardada que el usuario seleccione
+	 * @param num. El numero de boton en la que esa guardad la estación que el usuario dese cargar
+	 * @return String. La nueva estacion en la que se encuentra la radio y su frecuencia
+	 */
 	@Override
 	public String selectFrequency(int num) {
 		String r = "Se cargo la emisora: ";
@@ -183,6 +277,11 @@ public class Radio implements radioFunctions{
 		return r;
 	}
 
+	
+	/** Guarda la estacion actual en el boton que el usuario seleccione
+	 * @param num. 
+	 * @return String. Espacio en blanco
+	 */
 	@Override
 	public String saveFrequency(int num) {
 		String r = "";
@@ -195,6 +294,11 @@ public class Radio implements radioFunctions{
 		return r;
 	}
 
+	
+	/** Guarda la estacion (de FM) actual en el boton que el usuario seleccione
+	 * @param id El numero de boton en el que el usuario desea guardar la estacion
+	 * @return String
+	 */
 	@Override
 	public String saveStationFm(int id) {
 		FMbuttons.set(id, getFMfrequency());
@@ -202,6 +306,11 @@ public class Radio implements radioFunctions{
 		return r;
 	}
 
+	
+	/** Guarda la estacion actual (de AM) en el boton que el usuario seleccione
+	 * @param id. El numero de boton en el que el usuario desea guardar la estacion
+	 * @return String
+	 */
 	@Override
 	public String saveStationAm(int id) {
 		AMbuttons.set(id, getAMfrequency());
@@ -210,6 +319,10 @@ public class Radio implements radioFunctions{
 	}
 
 	//method from the object
+	/**
+	 * Muestra la lista de botones para que el usuario guarde una estacion
+	 * @return. La lista de botones 
+	 */
 	public String printListButtons() {
 		String r = "";
 		
